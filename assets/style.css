@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: calc(10px + 0.45vw);
+}
+
+body {
+	background-color: #222;
+	font-family: 'Montserrat', sans-serif;
+	color: #000;
+}
+
+.main {
+	width: 100%;
+	height: 100vh;
+}
+
+.slider {
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slider li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	transition: visibility 0s 1s;
+	will-change: visibility;
+}
+
+.image {
+	background-size: cover;
+	background-position: 50% 0%;
+	opacity: 0;
+	transition: opacity .5s ease-in-out .5s;
+	will-change: opacity;
+}
+
+@media screen and (orientation: portrait) {
+	.slider {
+		height: 100vh;
+	}
+
+	.landscape_image {
+		display: none;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	.slider {
+		height: 80vh;
+	}
+
+	.portrait_image {
+		display: none;
+	}
+}
+
+li.current {
+	width: 100%;
+	height: 100%;
+	visibility: visible;
+	transition-delay: 0s;
+}
+
+li.current .image {
+	width: inherit;
+	height: inherit;
+	opacity: 1;
+}
+
+nav {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	top: 45%;
+	background: transparent;
+	z-index: 2;
+}
+
+.prev,
+.next {
+	position: relative;
+	display: inline-block;
+	margin: 0 2rem;
+	cursor: pointer;
+}
+
+.prev svg,
+.next svg {
+	width: 5vh;
+	height: 5vh;
+	stroke: #fff;
+	stroke-width: 3px;
+}
+
+@media screen and (max-width: 768px) {
+
+	.prev svg,
+	.next svg {
+		width: 3vh;
+		height: 3vh;
+		stroke: rgba(255, 255, 255, 0.6);
+		stroke-width: 3px;
+	}
+}
+
+svg .popout {
+	stroke-dashoffset: 43;
+	stroke-dasharray: 43;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+	stroke-linecap: butt;
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+	-webkit-transform-origin: center center;
+	-ms-transform-origin: center center;
+	transform-origin: center center;
+	-webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+	-o-transition: stroke-dashoffset 0.5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+	transition: stroke-dashoffset 0.5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+}
+
+.prev:hover svg .popout,
+.next:hover svg .popout {
+	-webkit-transform: translateX(0) rotateX(180deg);
+	transform: translateX(0) rotateX(180deg);
+	stroke-dashoffset: 0;
+	stroke-dasharray: 43;
+	-webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+	-o-transition: stroke-dashoffset 0.5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+	transition: stroke-dashoffset 0.5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+}
