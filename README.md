@@ -79,7 +79,7 @@ Finally, the function calls the init function for all elements with the cd-slide
 
 ## Copyright and License
 
-Copyright 2023 Lebryere. Code released under the [MIT](https://github.com/LeBryere/simple_but_smart_slider/blob/master/LICENSE.txt) license.
+Copyright 2023 Lebryere. Code released under the [![MIT](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://github.com/LeBryere/simple_but_smart_slider/blob/master/LICENSE.txt) license.
 
 
 
