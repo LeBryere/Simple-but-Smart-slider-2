@@ -1,91 +1,24 @@
-# Ecommerce Slider v2.1
+# [LeBryere - Simple but smart SLIDER](https://lebryere.github.io/only_css_slider_thumbnails/)
 
-<!-- 
+## Browser Support
 
-// A függvény inicializálja a diavetítőt az átadott elemen (item).
-// Kiválasztjuk a diavetítőben található diák elemeket.
-// Beállítjuk a kezdő értékeket.
-// Létrehozzuk az előző gombot.
-// Létrehozzuk a következő gombot.
-// Ha több mint 1 dia van, hozzáadjuk a navigációs elemeket az item-hez.
-// Beállítjuk az aktuális és előző diákat.
-// Az "navigate" függvény megváltoztatja a diákat.
-// Ha jobbra megyünk, növeljük a "current" változó értékét.
-// Ha balra megyünk, csökkentjük a "current" változó értékét.
-// Beállítjuk az aktuális és előző diákat.
-// Ha az egér a diavetítőre kerül, kikapcsoljuk az automatikus frissítést.
-// Ha az egér a diavetítőről lekerül, visszakapcsoljuk az automatikus frissítést.
+![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Samsung Internet](https://raw.githubusercontent.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png)
+--- | --- | --- | --- | --- | --- |
+88+ ✔ | 88+ ✔ | 84+ ✔ | 14+ ✔ | 75+ ✔ | 15+ ✔ |
 
-// érzékelő eszközökkel történő navigáció
-// érintés mozgatása eseménykezelő
-// jobbra-balra irányú mozgás észlelése
-// balra mozgás esetén jobbra navigálunk
-// érintés befejezésekor az x és y értékek nullázása
+## Preview
 
+[![Resume Preview](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/preview.png)](https://lebryere.github.io/only_css_slider_thumbnails/)
 
+**[View Live Preview](https://lebryere.github.io/only_css_slider_thumbnails/)**
 
-// "The function initializes the slideshow on the given element (item).
-// We select the slide elements in the slideshow.
-// We set the initial values.
-// We create the previous button.
-// We create the next button.
-// If there is more than one slide, we add the navigation elements to the item.
-// We set the current and previous slides.
-// The "navigate" function changes the slides.
-// If we go right, we increase the value of the "current" variable.
-// If we go left, we decrease the value of the "current" variable.
-// We set the current and previous slides.
-// If the mouse is over the slideshow, we turn off automatic updates.
-// If the mouse leaves the slideshow, we turn automatic updates back on.
+## Status
 
-// Navigation with sensor devices.
-// Event handler for touch movement.
-// Detect right-left movements.
-// If we move left, we navigate right.
-// Resetting x and y values when touch is finished."
+[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/LICENSE)
 
+## Usage
 
-Az általános funkciója ennek a kódnak az, hogy egy olyan képeslap effektet hoz létre, amelyben egy lista elemei között lehet lapozni, vagy a rendszer automatikusan halad a listán. A kód az alábbiakat tartalmazza:
-
-* A lista elemeket kiválasztja és eltárolja az "items" változóban.
-* Az aktuális elem indexét az "current" változó tárolja.
-* Az "autoUpdate" változó azt jelzi, hogy a rendszer automatikusan lapoz-e, vagy sem.
-* Az "timeTrans" változó azt az időt tárolja, amelyet az automatikus lapozás végrehajtásához használnak.
-* A kódban előállít egy "nav" elemet, amely tartalmazza a navigációs nyilakat, a számlálót, az előző gombot és a következő gombot.
-* A "counter" elem a lista elemek számát és a jelenlegi elem indexét jeleníti meg.
-* Az "items" listaelemeknek megfelelően a megfelelő osztályneveket rendeli hozzájuk a rendszer.
-* Az "autoUpdate" változót akkor állítja be, hogy a rendszer automatikusan lapozzon-e, vagy sem, ha az egérrel belépünk vagy kilépünk a képeslapról.
-* A "navigate" függvény az előző vagy a következő elemre navigál, és frissíti a számlálót a jelenlegi elem indexével.
-* Az előző és a következő gombra való kattintás esetén az "navigate" függvényt hívja meg.
-* Az "items" listaelemekre történő kattintásra vagy az előző/következő gombokra történő kattintáson kívül a billentyűzet balra és jobbra nyilai is használhatók a navigációhoz.
-* Az "item" elemre való érintéssel az érintőképernyős navigáció támogatása van beállítva, ahol a képernyőn történő balra vagy jobbra húzással lehet navigálni az elemeken.
-* A kód minden ".cd-slider" osztályú elemen meghívja az "init" függvényt, amely elindítja az összes funkciót.
-
-Összességében a kód egyszerű, de hatékony módja annak, hogy interaktívabbá tegye az oldalakat és felkeltse a látogatók figyelmét.
-
-
-A függvénydefiníció kezdetén egy init() függvényt definiálunk, amely egy item paramétert vár. A függvény először kiválasztja az összes li elemet az item-en belül, majd beállít néhány változót. Ezek közé tartozik a current változó, amely az aktuális diát tartalmazza, az autoUpdate változó, amely igaz értéket tartalmaz, ha az automatikus frissítés engedélyezett, és egy timeTrans változó, amely az automatikus frissítés időközét határozza meg.
-
-Ezután létrehozunk egy navigációs menüt, amely tartalmaz két gombot (prevbtn, nextbtn) és egy számlálót (counter). A menüt hozzáadjuk az item-hez, ha több, mint egy elem van. Az aktuális diát beállítjuk current osztályként, és ha több, mint egy elem van, akkor az utolsó elemet beállítjuk prev_slide osztályként.
-
-Ezután egy navigate() függvényt definiálunk, amely a megadott irány szerinti navigációt végrehajtja. Az aktuális dia current osztályát eltávolítjuk, majd a következő vagy előző diát határozzuk meg az irány függvényében. Ezután a megfelelő osztályokat állítjuk be az elemeknek, és frissítjük a számlálót.
-
-Ezután hozzáadjuk az eseménykezelőket. Az item-hez hozzáadjuk az mouseenter és az mouseleave eseménykezelőket, hogy az automatikus frissítés leálljon, amikor az egér belép az elembe, és újrainduljon, amikor az egér elhagyja az elemet. Az autoUpdate változó alapértelmezés szerint igaz, és ha az automatikus frissítés engedélyezve van, akkor a setInterval() függvénnyel beállítjuk az időzítőt, amely a megadott időközönként meghívja a navigate() függvényt.
-
-Hozzáadjuk a prevbtn és nextbtn gombok eseménykezelőit, amelyek a megfelelő irányba hajtanak végre navigációt. Hozzáadjuk a billentyűzetkezelő eseménykezelőt, amely lehetővé teszi a felhasználó számára, hogy a bal és jobb nyilak használatával navigáljon. Végül hozzáadjuk az érintéskezelő eseménykezelőket 
-
-Ezután a kódrészletben meghatározzuk a navigate függvényt, amely a navigációért felelős. A függvény a paraméterként kapott dir változó értékének függvényében dönti el, hogy balra vagy jobbra kell-e lapozni. A current változó értékét is ennek megfelelően frissíti. Az items lista elemeinek megfelelően beállítja a className értékeit, és frissíti a számláló értékét.
-
-Ezután az egérmozgásra és érintőképernyős eseményekre vonatkozó eseménykezelőket adunk hozzá. Az item elemre rámutatva az autoUpdate változó értékét false-ra állítjuk, így az automatikus lapozás leáll. Az egérmutató eltávolításakor az autoUpdate értéke visszaáll true-ra, és az automatikus lapozás folytatódik.
-
-Ezután az automatikus lapozásért felelős időzítőt állítjuk be, amely a timeTrans változó értékének megfelelően navigál a diák között. A prevbtn és nextbtn gombokra kattintva a navigate függvényt hívjuk meg, és a billentyűzetről történő navigációt is kezeljük.
-
-Végül hozzáadunk eseménykezelőket az érintőképernyős eszközökhöz, amelyek a balra és jobbra húzásra reagálnak, és megfelelően navigálnak a diák között.
-
-Végül a függvény az összes cd-slider osztályú elemre hívja meg az init függvényt, hogy inicializálja a diavetítőt az összes megfelelő elemen.
-
-
-
+### Basic Inspiration
 
 The general function of this code is to create a postcard effect in which the elements of a list can be navigated by paging or the system automatically advances through the list. The code includes the following:
 
@@ -105,6 +38,21 @@ The general function of this code is to create a postcard effect in which the el
 
 Overall, the code is a simple but effective way to make pages more interactive and catch visitors' attention.
 
+### Variables
+```
+html{
+   background-color: #222;
+}
+```
+```
+<script>
+   // We set the initial values.
+	current = 0,
+	autoUpdate = true,
+	timeTrans = 5000;
+</script>
+```
+### A little more detail
 
 At the beginning of the function definition, we define an init() function that expects an item parameter. The function first selects all li elements within the item and sets some variables. These include the current variable that contains the current slide, the autoUpdate variable that holds a true value if automatic update is enabled, and a timeTrans variable that determines the interval for automatic update.
 
@@ -125,6 +73,13 @@ Then, we set up the timer responsible for automatic flipping, which navigates be
 Finally, we add event handlers for touch screen devices, which respond to swiping left and right and navigate between slides accordingly.
 
 Finally, the function calls the init function for all elements with the cd-slider class to initialize the slideshow on all appropriate elements.
+```
+ 
+```
+
+## Copyright and License
+
+Copyright 2023 Lebryere. Code released under the [MIT](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/LICENSE) license.
 
 
- -->
+
