@@ -33,66 +33,6 @@
         </li>
       </ul>
     </div>
-    <dic class="content">
-      <p>
-        Overall, the code is a simple but effective way to make pages more interactive and catch visitors'
-        attention.</p>
-      <ul>
-        <li>
-          At the beginning of the function definition, we define an init() function that expects an item
-          parameter. The function first selects all li elements within the item and sets some variables.
-          These include the current variable that contains the current slide, the autoUpdate variable that
-          holds a true value if automatic update is enabled, and a timeTrans variable that determines the
-          interval for automatic update.
-        </li>
-        <li>
-          Next, we create a navigation menu that contains two buttons (prevbtn, nextbtn) and a counter.
-          We add the menu to the item if there is more than one element. We set the current slide as the
-          current class, and if there is more than one element, we set the last element as the prev_slide class.
-        </li>
-        <li>
-          Then, we define a navigate() function that performs navigation in the specified direction.
-          We remove the current class of the current slide and determine the next or previous slide
-          depending on the direction. Then, we set the appropriate classes for the elements and update the counter.
-        </li>
-        <li>
-          Next, we add the event handlers. We add the mouseenter and mouseleave event handlers to the
-          item to stop automatic update when the mouse enters the element and restart it when the mouse
-          leaves the element. The autoUpdate variable is true by default, and if automatic update is enabled,
-          we set the timer with the setInterval() function, which calls the navigate() function at the
-          specified interval.
-        </li>
-        <li>
-          We add event handlers for the prevbtn and nextbtn buttons, which perform navigation in the appropriate
-          direction. We add a keyboard event handler that allows the user to navigate using the left and right
-          arrows. Finally, we add touch event handlers.
-        <li>
-          Then, in the code snippet, we define the navigate function that is responsible for navigation.
-          The function decides whether to flip left or right based on the value of the dir variable passed
-          as a parameter. It also updates the value of the current variable accordingly. It sets the className
-          values of the items in the list appropriately and updates the counter value.
-        </li>
-        <li>
-          Next, we add event handlers for mouse movement and touch screen events. When pointing to the item
-          element, we set the value of the autoUpdate variable to false, so automatic flipping stops. When the
-          cursor is removed, the autoUpdate value returns to true, and automatic flipping continues.
-        </li>
-        <li>
-          Then, we set up the timer responsible for automatic flipping, which navigates between slides according
-          to the value of the timeTrans variable. When clicking on the prevbtn and nextbtn buttons, we call the
-          navigate function, and we also handle navigation from the keyboard.
-        </li>
-        <li>
-          Finally, we add event handlers for touch screen devices, which respond to swiping left and right
-          and navigate between slides accordingly.
-        </li>
-        <li>
-          Finally, the function calls the init function for all elements with the cd-slider class to initialize
-          the slideshow on all appropriate elements.
-        </li>
-      </ul>
-      </p>
-    </dic>
   </div>
   <script src="./assets/script.js"></script>
 </body>
