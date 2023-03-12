@@ -10,7 +10,7 @@
 
 [![Resume Preview](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/preview.png)](https://github.com/LeBryere/simple_but_smart_slider/blob/master/preview.png)
 
-**[View Live Preview](https://lebryere.github.io/only_css_slider_thumbnails/)**
+**[View Live Preview](https://lebryere.github.io/simple_but_smart_slider/)**
 
 ## Status
 
