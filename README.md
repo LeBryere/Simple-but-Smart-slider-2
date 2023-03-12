@@ -1,4 +1,4 @@
-# [LeBryere - Simple but smart SLIDER](https://lebryere.github.io/only_css_slider_thumbnails/)
+# [Simple but smart SLIDER](https://lebryere.github.io/only_css_slider_thumbnails/)
 
 ## Browser Support
 
@@ -8,13 +8,13 @@
 
 ## Preview
 
-[![Resume Preview](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/preview.png)](https://lebryere.github.io/only_css_slider_thumbnails/)
+[![Resume Preview](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/preview.png)](https://github.com/LeBryere/simple_but_smart_slider/blob/master/preview.png)
 
 **[View Live Preview](https://lebryere.github.io/only_css_slider_thumbnails/)**
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/LICENSE)
+[![GitHub license](https://github.com/LeBryere/simple_but_smart_slider/blob/master/LICENSE.txt)
 
 ## Usage
 
@@ -39,12 +39,12 @@ The general function of this code is to create a postcard effect in which the el
 Overall, the code is a simple but effective way to make pages more interactive and catch visitors' attention.
 
 ### Variables
-```
+```css
 html{
    background-color: #222;
 }
 ```
-```
+```js
 <script>
    // We set the initial values.
 	current = 0,
@@ -79,7 +79,7 @@ Finally, the function calls the init function for all elements with the cd-slide
 
 ## Copyright and License
 
-Copyright 2023 Lebryere. Code released under the [MIT](https://github.com/LeBryere/only_css_slider_thumbnails/blob/master/LICENSE) license.
+Copyright 2023 Lebryere. Code released under the [MIT](https://github.com/LeBryere/simple_but_smart_slider/blob/master/LICENSE.txt) license.
 
 
 
