@@ -1,4 +1,4 @@
-# [Simple but smart SLIDER](https://lebryere.github.io/only_css_slider_thumbnails/)
+# [Simple but smart SLIDER](https://lebryere.github.io/simple_but_smart_slider/)
 
 ## Browser Support
 
