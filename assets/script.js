@@ -36,7 +36,7 @@
 
 		// We set the current and previous slides.
 		items[current].className = "current";
-		if (items.length > 1) items[items.length - 1].className = "prev_slide";
+		if (items.length > 1) items[items.length - 1].className = "prev_slider";
 
 		// The "navigate" function changes the slides.
 		var navigate = function (dir) {
@@ -55,7 +55,7 @@
 			var prevCurrent = current > 0 ? current - 1 : items.length - 1;
 
 			items[current].className = "current";
-			items[prevCurrent].className = "prev_slide";
+			items[prevCurrent].className = "prev_slider";
 			items[nextCurrent].className = "";
 		}
 

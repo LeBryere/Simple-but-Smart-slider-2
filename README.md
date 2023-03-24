@@ -56,7 +56,7 @@ html{
 
 At the beginning of the function definition, we define an init() function that expects an item parameter. The function first selects all li elements within the item and sets some variables. These include the current variable that contains the current slide, the autoUpdate variable that holds a true value if automatic update is enabled, and a timeTrans variable that determines the interval for automatic update.
 
-Next, we create a navigation menu that contains two buttons (prevbtn, nextbtn) and a counter. We add the menu to the item if there is more than one element. We set the current slide as the current class, and if there is more than one element, we set the last element as the prev_slide class.
+Next, we create a navigation menu that contains two buttons (prevbtn, nextbtn) and a counter. We add the menu to the item if there is more than one element. We set the current slide as the current class, and if there is more than one element, we set the last element as the prev_slider class.
 
 Then, we define a navigate() function that performs navigation in the specified direction. We remove the current class of the current slide and determine the next or previous slide depending on the direction. Then, we set the appropriate classes for the elements and update the counter.
 
