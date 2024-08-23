@@ -8,9 +8,9 @@
 
 ## Preview
 
-[![Resume Preview](https://github.com/LeBryere/simple_but_smart_slider/blob/master/preview.png)](https://lebryere.github.io/simple_but_smart_slider/)
+[![Resume Preview](https://github.com/LeBryere/simple_but_smart_slider/blob/master/preview.png)](https://lebryere.github.io/Simple-but-Smart-slider-2/)
 
-**[View Live Preview](https://lebryere.github.io/simple_but_smart_slider/)**
+**[View Live Preview](https://lebryere.github.io/Simple-but-Smart-slider-2/)**
 
 ## Status
 
